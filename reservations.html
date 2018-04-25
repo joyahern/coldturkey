@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--Header with Navigation-->
+    <nav>
+        <div class="brand">
+            <img src="#">
+            <!--logo-->
+            <h1>Cold Turkey</h1>
+        </div>
+        <div class="nav-bar">
+            <ul>
+                <li>Home</li>
+                <li>Menu</li>
+                <li>Reservations</li>
+                <li>About</li>
+            </ul>
+        </div>
+    </nav>
+    
+<!--header-->
+    <header>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <div>
+            <button type="button">Reserve</button>
+        </div>
+    </header>
+
+<!--Map-->
+<div id="map"></div>
+
+<!--Reservations-->
+<form>
+    <input type="radio" name="contact">Contact Us
+<input type="radio" name="reservation"> Make a Reservation
+<br>
+<input type="text"name="name"> Name   
+<input type="text"name="email"> Email 
+<input type="text"name="phone"> Phone 
+<input type="text"name="date"> Date 
+<input type="text"name="time"> Time
+<input type="text"name="message"> Message 
+</form>
+
+<!--Footer-->
+    <footer>
+        <div class="logo">
+            <img src="images/logo.png" style="width:250px; height: 250px;">
+        </div>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter-square"></i>
+        <br>
+        <ul>
+            <li class="about"><a href="about.html">About</a></li>
+            <li class="menu"><a href="memu.html">Menu</a></li>
+            <li class="reservations"><a href="reservations.html">Reservations & Contact Us</a></li>
+        </ul>
+        Copyright &copy; Cold Turkey Drinks on the Highline 2018
+    </footer>
+
+<script>
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(40.755587,-74.005630),
+    zoom:15,
+};
+var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(40.755587,-74.005630),
+          map: map,
+        });
+var map=new google.maps.Map(document.getElementById("map"),mapProp);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADTBhVvXFoouaYJ3ie2k2PnoTHWOYMJg8&callback=myMap"></script>
+</body>
+
+</html>
